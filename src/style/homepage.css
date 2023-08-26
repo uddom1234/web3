@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+  }
+  
+  .small-container {
+    flex: 1;
+    background-color: white;
+    border-radius: 15px; 
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); /* Horizontal offset, vertical offset, blur radius, color */
+  }
+  
+  .big-container {
+    flex: 8;
+    background-color: #bdbdbd;
+    position: relative; /* Added for the absolute positioning of the scrolling content */
+  }
+  
+  /* Scrolling window inside big container */
+  .scrolling-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    padding: 10px;
+  }
