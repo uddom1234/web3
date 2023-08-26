@@ -10,7 +10,10 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 const HomePage = () => {
     return (
-        <div class="container">
+      <div>
+      <Header/>
+
+    <div class="container">
     <div class="small-container">
       <h1 className="text-3xl font-bold text-black underline">
         Small Container
@@ -48,6 +51,7 @@ const HomePage = () => {
         line 3 <br></br>
       </div>  
     </div>
+</div>
 </div>
 
     )}
