@@ -6,7 +6,7 @@ import Paper from '@mui/material/Paper';
 import Header from "../components/Header";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import "../style/homepage.css";
+
 
 const HomePage = () => {
     return (
@@ -51,7 +51,7 @@ const HomePage = () => {
         line 3 <br></br>
       </div>  
     </div>
-</div>
+</div>  
 </div>
 
     )}
