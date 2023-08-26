@@ -13,8 +13,8 @@ export default function Header() {
         </div>
         <ul class="flex space-x-4">
           <li><a href="/" class="text-white hover:text-blue-300 font-bold transition-colors duration-300 ease-in-out">Home</a></li>
+          <li><a href="/browse" class="text-white hover:text-blue-300 font-bold transition-colors duration-300 ease-in-out">Browse</a></li>
           <li><a href="/history" class="text-white hover:text-blue-300 font-bold transition-colors duration-300 ease-in-out">History</a></li>
-          <li><a href="#" class="text-white hover:text-blue-300 font-bold transition-colors duration-300 ease-in-out">About Us</a></li>
           <li><a href="#" class="text-white hover:text-blue-300 font-bold transition-colors duration-300 ease-in-out">Contact</a></li>
         </ul>
       </nav>
