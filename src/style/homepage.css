@@ -1,22 +1,25 @@
+/* Container styles */
 .container {
     display: flex;
     height: 300px;
     justify-content: space-between;
-  }
-  
-  .small-container {
+}
+
+.small-container {
     flex: 1;
-    background-color: white;
-    border-radius: 15px; 
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); /* Horizontal offset, vertical offset, blur radius, color */
-  }
-  
-  .big-container {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+.big-container {
     flex: 8;
     background-color: #bdbdbd;
-    position: relative; /* Added for the absolute positioning of the scrolling content */
-  }
-  
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Horizontal offset, vertical offset, blur radius, color */
+}
+.big-container-height {
+    height: 80vh;
+}
   /* Scrolling window inside big container */
   .scrolling-content {
     position: absolute;
