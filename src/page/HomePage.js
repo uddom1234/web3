@@ -12,7 +12,9 @@ const HomePage = () => {
     return (
         <div class="container">
     <div class="small-container">
+      <h1 className="text-3xl font-bold text-black underline">
         Small Container
+        </h1>
     </div>
     <div class="big-container">
       <div class="scrolling-content">
