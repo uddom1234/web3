@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/History.css';
+import '../style/history.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
