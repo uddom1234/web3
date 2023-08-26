@@ -12,65 +12,28 @@ const HomePage = () => {
     return (
 <div>
 <Header/>
-<main>
-<div class="container flex space-x-10">
-    <div class="small-container flex-1 bg-white-300 rounded h-72">
-        <h1 class="italic font-bold text-xl underline">Small Container</h1>
-    </div>
-    <div class="big-container flex-2 bg-gray-500 relative rounded-lg big-container-height">
-        <div class="scrolling-content">
-            Big Container - Scrolling content <br/>
-            Line 1 <br/>
-            Line 2 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
+<div class="container flex space-x-10 m-24 border-solid">
+    <main className="container mx-auto p-4 mt-6">
+        <h2 className="text-xl font-semibold mb-4">Welcome to BlockHub</h2>
+        <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"> {/*Trade Now, go to browser page */}
+          <div className="bg-white p-4 rounded shadow"> 
+            <h3 className="font-semibold">Start Trading</h3>
+            <p>Some content here.</p>
+          </div>
+          
+          <div className="bg-white p-4 rounded shadow"> {/*Upload assets*/}
+            <h3 className="font-semibold">Upload Assets</h3>
+            <p>Some content here.</p>
+          </div>
 
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-            Line 3 <br/>
-
-            Line 3 <br/>
-            Line 3 <br/>
-
-            Line 3 <br/>
-            Line 3 <br/>
-
-            Line 3 <br/>
-            Line 3 <br/>
-
-            Line 100 <br/>
-        </div>
-    </div>
+          <div className="bg-white p-4 rounded shadow"> {/**View Trading History */}
+            <h3 className="font-semibold">View History</h3>
+            <p>Some content here.</p>
+          </div>
+        </section>  
+    </main>
 </div>
-</main>
+
 </div>
 )}
 
