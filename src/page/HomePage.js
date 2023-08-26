@@ -6,54 +6,35 @@ import Paper from '@mui/material/Paper';
 import Header from "../components/Header";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-
+import "../style/homepage.css";
 
 const HomePage = () => {
     return (
-      <div>
-      <Header/>
+<div>
+<Header/>
+<div class="container flex space-x-10 m-24 border-solid">
+    <main className="container mx-auto p-4 mt-6">
+        <h2 className="text-xl font-semibold mb-4">Welcome to BlockHub</h2>
+        <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 "> 
+          <a href="/browse" className="bg-white p-4 rounded shadow hover:-translate-y-0.5 hover:translate-x-0.5 transition 3s all-in-out"> 
+            <h3 className="font-semibold">Start Trading</h3>{/*Trade Now, go to browser page */}
+            <p>Some content here.</p>
+          </a>
+          
+          <div className="bg-white p-4 rounded shadow"> {/*Upload assets*/}
+            <h3 className="font-semibold">Upload Assets</h3>
+            <p>Some content here.</p>
+          </div>
 
-    <div class="container">
-    <div class="small-container">
-      <h1 className="text-3xl font-bold text-black underline">
-        Small Container
-        </h1>
-    </div>
-    <div class="big-container">
-      <div class="scrolling-content">
-        big container<br></br>
-        line 1 <br></br> 
-        line 2 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-
-        line 3 <br></br>
-        line 3 <br></br>
-        variantline 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-      </div>  
-    </div>
-</div>  
+          <a href ="/history" className="bg-white p-4 rounded shadow hover:-translate-y-0.5 hover:translate-x-0.5 transition 3s all-in-out"> {/**View Trading History */}
+            <h3 className="font-semibold">View History</h3>
+            <p>Some content here.</p>
+          </a>
+        </section>  
+    </main>
 </div>
 
-    )}
+</div>
+)}
 
 export default HomePage;
