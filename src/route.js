@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 
-import HomePage from "./HomePage";
+import HomePage from "./page/HomePage";
 
 export default function RouteApp () {
     return (
