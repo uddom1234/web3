@@ -1,5 +1,4 @@
-import React from 'react';
-import '../style/history.css';
+
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
