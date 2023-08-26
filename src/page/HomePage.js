@@ -10,47 +10,68 @@ import "../style/homepage.css";
 
 const HomePage = () => {
     return (
-        <div class="flex h-72 space-x-4">
-    <div class="small-container flex-1 bg-gray-300 rounded-lg">
-      <h1 className="text-3xl font-bold text-black underline">
-        Small Container
-        </h1>
-        <h1 className="text-3xl italic underline">testing </h1>
+<div>
+<Header/>
+<main>
+<div class="container flex space-x-10">
+    <div class="small-container flex-1 bg-white-300 rounded h-72">
+        <h1 class="italic font-bold text-xl underline">Small Container</h1>
     </div>
-    <div className="big-container flex-2 bg-gray-500 relative rounded-lg big-container-height">
-      <div class="scrolling-content">
-        big container<br></br>
-        line 1 <br></br> 
-        line 2 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
+    <div class="big-container flex-2 bg-gray-500 relative rounded-lg big-container-height">
+        <div class="scrolling-content">
+            Big Container - Scrolling content <br/>
+            Line 1 <br/>
+            Line 2 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
 
-        line 3 <br></br>
-        line 3 <br></br>
-        variantline 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-        line 3 <br></br>
-      </div>  
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+            Line 3 <br/>
+
+            Line 3 <br/>
+            Line 3 <br/>
+
+            Line 3 <br/>
+            Line 3 <br/>
+
+            Line 3 <br/>
+            Line 3 <br/>
+
+            Line 100 <br/>
+        </div>
     </div>
 </div>
-
-    )}
+</main>
+</div>
+)}
 
 export default HomePage;

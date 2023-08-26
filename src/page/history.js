@@ -1,7 +1,10 @@
 import React from 'react';
-import './History.css';
+import '../style/history.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-class History extends React.Component {
+class 
+History extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +19,9 @@ class History extends React.Component {
 
   render() {
     return (
-      <div>
+        <div className="flex flex-col min-h-screen">
+        <Header/>
+        <main className="flex-grow">
         <h1>History Page</h1>
         <table border="1">
           <thead>
@@ -38,7 +43,10 @@ class History extends React.Component {
             })}
           </tbody>
         </table>
+        </main>
+        <Footer/>
       </div>
+      
     );
   }
 }
