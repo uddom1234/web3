@@ -21,7 +21,7 @@ History extends React.Component {
     return (
         <div className="flex flex-col min-h-screen">
         <Header/>
-        <main className="flex-grow">
+        <main className="flex-grow mt-24 p-12">
         <h1>History Page</h1>
         <table border="1">
           <thead>
