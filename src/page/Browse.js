@@ -13,9 +13,11 @@ const Browse = () => {
   // Example categories and assets data
   const categories = ["Category 1", "Category 2", "Category 3"];
   const assets = [
-    { id: 1, name: "Asset 1", category: "Category 1", price: 100, staked: 50, rewards: 10, balance: 200 },
-    { id: 2, name: "Asset 2", category: "Category 2", price: 150, staked: 30, rewards: 5, balance: 100 },
-    // Add more assets...
+    { id: 1, name: "Asset 1", category: "Category 1", price: 100, staked: 50, rewards: 10, balance: 200, logoUrl: 'https://plus.unsplash.com/premium_photo-1680397095052-39959b44a604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2980&q=80' },
+    { id: 2, name: "Asset 2", category: "Category 2", price: 150, staked: 30, rewards: 5, balance: 100, logoUrl: 'https://images.unsplash.com/photo-1639603683079-7398c604497a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2667&q=80'},
+    { id: 3, name: "Asset 3", category: "Category 3", price: 400, staked: 20, rewards: 4, balance: 300, logoUrl: 'https://images.unsplash.com/photo-1656523864170-d4a1b4a263b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3174&q=80'},
+    { id: 4, name: "Asset 4", category: "Category 1", price: 450, staked: 10, rewards: 3, balance: 400, logoUrl: 'https://plus.unsplash.com/premium_photo-1677487978441-5c92fb475e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3132&q=80'},
+
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("");
