@@ -61,7 +61,7 @@ const HomePage = () => {
         </Grid>
         <Grid item xs={4} md={4}>
             <div className="w-full">
-            <a href="/browse" className="group">
+            <a href="/history" className="group">
                     <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
                         Trasaction History
                     </button>
