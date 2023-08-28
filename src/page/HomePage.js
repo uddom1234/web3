@@ -50,15 +50,23 @@ const HomePage = () => {
             </div>
         </Grid>
         <Grid item xs={4} md={4}>
-            <div className="w-full border">
-            <h2 className="text-md font-semibold">Upload Assets</h2>
+        <div className="w-full">
+            <a href="/browse" className="group">
+                    <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
+                        Upload Assets
+                    </button>
+                    <p className="opacity-0 group-hover:opacity-100 transition-opacity mt-2">Earn income by selling your blockchain assets.</p>
+                </a>
             </div>
         </Grid>
         <Grid item xs={4} md={4}>
-            <div className="w-full border">
-            <a href ="/history">
-            <h2 className="text-md font-semibold">View History</h2>
-            </a>
+            <div className="w-full">
+            <a href="/browse" className="group">
+                    <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
+                        Trasaction History
+                    </button>
+                    <p className="opacity-0 group-hover:opacity-100 transition-opacity mt-2">View full history of all blockchain transactions.</p>
+                </a>
             </div>
         </Grid>
     </Grid>
