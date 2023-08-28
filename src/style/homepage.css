@@ -3,6 +3,3 @@
     display: flex;
     justify-content: space-between;   
 }
-.wholepage {
-    background-image: url("../../public/homepagebackground.jpg");
-}
