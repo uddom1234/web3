@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import AssetItem from "../components/AssetItem";
 import ReusableSelect from "../components/Filter";
 import PriceRangeSlider from "../components/PriceRangeSlider";
+import Upload from "../components/Upload";
 
 const Browse = () => {
   // Example categories and assets data
@@ -25,6 +26,15 @@ const Browse = () => {
   const [selectedListings, setSelectedListings] = useState("");
   const [selectedPopularTrade, setSelectedPopularTrade] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   // Filter the assets based on selected filters and search term
   const filteredAssets = assets.filter(asset => 
@@ -96,8 +106,44 @@ const Browse = () => {
                 
               </div>
             </Paper>
-            <button className="my-10 border border-black w-full p-5 rounded-lg hover:shadow-lg transition 3s bg-blue-700 hover:bg-blue-400 text-white font-bold">Upload Asset</button>
-          </Grid>
+            <button
+              className="my-10 border border-black w-full p-5 rounded-lg hover:shadow-lg transition 3s bg-blue-700 hover:bg-blue-400 text-white font-bold"
+              onClick={openModal}
+            >
+              Upload Asset
+            </button>
+            <Upload
+              isOpen={isModalOpen}
+              onClose={closeModal}
+              title="Upload Asset"
+            >
+<form onSubmit={(e) => { e.preventDefault(); }}>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Asset Name:</label>
+            <input className="mt-1 p-2 border rounded-md w-full" type="text" name="assetName" />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Price:</label>
+            <input className="mt-1 p-2 border rounded-md w-full" type="number" name="price" />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Category:</label>
+            <input className="mt-1 p-2 border rounded-md w-full" type="text" name="category" />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Upload Images:</label>
+            <input className="mt-1 p-2 border rounded-md w-full" type="file" name="images" multiple />
+          </div>
+
+          {/* Add more form fields for crypto-related information */}
+          
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" type="submit">Submit</button>
+        </form>
+            </Upload>          
+        </Grid>
           
           {/* Right side for displaying assets */}
           <Grid item xs={7} lg={9}>
