@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const History = () => { 
-  const [transactionHistory] = useState([ 
+const History = () => {
+  const [transactionHistory] = useState([
     { id: '1111111111111111111', method: 'mint', date: '09/02/2023' },
     { id: '2222222222222222222', method: 'gift', date: '02/02/2013' },
     { id: '3333333333333333333', method: 'mint', date: '09/02/2019' },
@@ -22,12 +22,24 @@ const History = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [transactionsPerPage] = useState(6);
 
+  const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
+
+  const sortTransactions = (transactions, order) => {
+    return [...transactions].sort((a, b) => {
+      const dateA = new Date(a.date.split('/').reverse().join('-'));
+      const dateB = new Date(b.date.split('/').reverse().join('-'));
+      return order === 'asc' ? dateA - dateB : dateB - dateA;
+    });
+  };
+
+  const sortedTransactions = sortTransactions(transactionHistory, sortOrder);
+
   const indexOfLastTransaction = currentPage * transactionsPerPage;
   const indexOfFirstTransaction = indexOfLastTransaction - transactionsPerPage;
-  const currentTransactions = transactionHistory.slice(indexOfFirstTransaction, indexOfLastTransaction);
+  const currentTransactions = sortedTransactions.slice(indexOfFirstTransaction, indexOfLastTransaction);
 
   const nextPage = () => {
-    if (currentPage < Math.ceil(transactionHistory.length / transactionsPerPage)) {
+    if (currentPage < Math.ceil(sortedTransactions.length / transactionsPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   }
@@ -38,31 +50,36 @@ const History = () => {
     }
   }
 
+  const toggleSortOrder = () => {
+    setSortOrder(prevSortOrder => prevSortOrder === 'asc' ? 'desc' : 'asc');
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow mt-24 px-8 py-4">
         <div className="bg-gray-800 p-6 mb-8 text-white border-2 border-black shadow-xl rounded-lg">
           <h1 className="text-center">History Page</h1>
+
+
+          <h1 className="text-center animate-bounce font-bold text-2xl">Welcome Uddom Pang!</h1>
         </div>
         <table className="min-w-full border-collapse border border-black shadow-xl">
           <thead>
             <tr>
               <th className="py-2 px-4 border border-black">Transaction ID</th>
               <th className="py-2 px-4 border border-black">Method</th>
-              <th className="py-2 px-4 border border-black">Date</th>
+              <th  className="py-2 px-4 border border-black"><button onClick={toggleSortOrder}>Date {sortOrder === 'asc' ? '↓' : '↑'}</button></th>
             </tr>
           </thead>
           <tbody>
-            {currentTransactions.map((transaction, index) => {
-              return (
-                <tr key={index}>
-                  <td className="py-2 px-4 border border-black">{transaction.id}</td>
-                  <td className="py-2 px-4 border border-black">{transaction.method}</td>
-                  <td className="py-2 px-4 border border-black">{transaction.date}</td>
-                </tr>
-              );
-            })}
+            {currentTransactions.map((transaction, index) => (
+            <tr key={index}>
+              <td className="py-2 px-4 border border-black">{transaction.id}</td>
+              <td className="py-2 px-4 border border-black">{transaction.method}</td>
+              <td className="py-2 px-4 border border-black">{transaction.date}</td>
+            </tr>
+            ))}
           </tbody>
         </table>
         <div className="flex justify-center mt-4">
