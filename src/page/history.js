@@ -59,9 +59,13 @@ const History = () => {
       <Header />
       <main className="flex-grow mt-24 px-8 py-4">
         <div className="bg-gray-800 p-6 mb-8 text-white border-2 border-black shadow-xl rounded-lg">
+<<<<<<< HEAD
           <h1 className="text-center">History Page</h1>
 
 
+=======
+          <h1 className="text-center animate-bounce font-bold text-2xl">Welcome Uddom Pang!</h1>
+>>>>>>> 590dd54569ff92c235247ab2ab5fcc8ef3e351ce
         </div>
         <table className="min-w-full border-collapse border border-black shadow-xl">
           <thead>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
@@ -9,9 +9,20 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Box from '@mui/material/Box';
 import "../style/homepage.css";
 import Footer from "../components/Footer";
+import Upload from "../components/Upload";
 
 const HomePage = () => {
+
     const [isMounted, setIsMounted] = React.useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setIsModalOpen(false);
+    };
 
     React.useEffect(() => {
       setTimeout(() => {
@@ -51,18 +62,47 @@ const HomePage = () => {
         </Grid>
         <Grid item xs={4} md={4}>
         <div className="w-full">
-            <a href="/browse" className="group">
-                    <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
+                    <button onClick={openModal} className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
                         Upload Assets
                     </button>
+                    <Upload
+              isOpen={isModalOpen}
+              onClose={closeModal}
+              title="Upload Asset"
+            >
+                    <form onSubmit={(e) => { e.preventDefault(); }}>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Asset Name:</label>
+            <input className="mt-1 p-2 border rounded-md w-full" type="text" name="assetName" />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Price:</label>
+            <input className="mt-1 p-2 border rounded-md w-full" type="number" name="price" />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Category:</label>
+            <input className="mt-1 p-2 border rounded-md w-full" type="text" name="category" />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Upload Images:</label>
+            <input className="mt-1 p-2 border rounded-md w-full" type="file" name="images" multiple />
+          </div>
+
+          {/* Add more form fields for crypto-related information */}
+          
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" type="submit">Submit</button>
+        </form>
+            </Upload>
                     <p className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center">Earn income by selling your blockchain assets.</p>
-                </a>
             </div>
         </Grid>
         <Grid item xs={4} md={4}>
             <div className="w-full">
             <a href="/history" className="group">
-                    <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
+                    <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105 whitespace-nowrap">
                         Trasaction History
                     </button>
                     <p className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center">View full history of all blockchain transactions.</p>
