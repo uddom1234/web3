@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 
 import HomePage from "./page/HomePage";
-import History from "./page/history";
+import History from "./page/History";
 import Browse from "./page/Browse";
 
 export default function RouteApp () {
