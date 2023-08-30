@@ -78,12 +78,12 @@ const HomePage = () => {
       </Grid>
       <Grid item xs={6} md={5}>
         <div className="w-full">
-            <button className="px-8 py-4 text-lg font-bold bg-blue-500 hover:bg-amber-400 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform hover:scale-105">
-             Sign Up
-            </button>
-            <button className="px-8 py-4 text-lg font-bold bg-blue-500 hover:bg-amber-400 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform hover:scale-105">
-                Log In
-            </button>
+        <a href="/signup" className="flex items-center justify-center px-8 py-4 text-lg font-bold bg-blue-500 hover:bg-amber-400 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform hover:scale-105">
+            Sign Up
+        </a>
+        <a href="/login" className="flex items-center justify-center px-8 py-4 text-lg font-bold bg-blue-500 hover:bg-amber-400 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform hover:scale-105">
+            Log In
+        </a>
             <div className="w-full pt-20">
                 <img src="../../homepage_2.jpg" alt="image" className="w-full h-auto"/>
             </div>
