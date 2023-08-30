@@ -96,6 +96,7 @@ const Browse = () => {
                 
               </div>
             </Paper>
+            <button className="my-10 border border-black w-full p-5 rounded-lg hover:shadow-lg transition 3s bg-blue-700 hover:bg-blue-400 text-white font-bold">Upload Asset</button>
           </Grid>
           
           {/* Right side for displaying assets */}
