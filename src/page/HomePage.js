@@ -51,20 +51,27 @@ const HomePage = () => {
         <Grid item xs={6} md={5}>
         <Grid container spacing={8}>
         <Grid item xs={4} md={4}>
-            <div className="w-full">
+            <div className="group w-full h-full relative hover:bg-blue-100 p-2 rounded-2xl">
             <a href="/browse" className="group">
                     <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
                         Start Trading
                     </button>
-                    <p className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center">Start your trading journey here.</p>
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center"><p>Start your trading journey here.</p>
+                    <img src="../../trading.png" alt="image" className="w-full h-auto"/>
+                    </div>
                 </a>
             </div>
         </Grid>
         <Grid item xs={4} md={4}>
-        <div className="w-full">
+        <div className="group w-full h-full relative hover:bg-blue-100 p-2 rounded-2xl">
                     <button onClick={openModal} className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
                         Upload Assets
                     </button>
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center">
+                    <p>Earn income by selling your blockchain assets.</p>
+                    <img src="../../upload.png" alt="image" className="w-full h-auto"/>
+                    </div>
+                    </div>
                     <Upload
               isOpen={isModalOpen}
               onClose={closeModal}
@@ -96,16 +103,19 @@ const HomePage = () => {
           <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" type="submit">Submit</button>
         </form>
             </Upload>
-                    <p className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center">Earn income by selling your blockchain assets.</p>
-            </div>
+               
+     
         </Grid>
         <Grid item xs={4} md={4}>
-            <div className="w-full">
+            <div className="group w-full relative hover:bg-blue-100 p-2 rounded-2xl">
             <a href="/history" className="group">
                     <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105 whitespace-nowrap">
-                        Trasaction History
+                     View History
                     </button>
-                    <p className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center">View full history of all blockchain transactions.</p>
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center">
+                    <p>View full history of your blockchain transactions.</p>
+                    <img src="../../history.png" alt="image" className="w-full h-auto"/>
+                    </div>
                 </a>
             </div>
         </Grid>

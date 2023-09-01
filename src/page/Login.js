@@ -18,22 +18,16 @@ const Login = () => {
         setIsMounted(true);
       }, 700); // Initial delay
     }, []);
-    const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-      }));
+
 return (
     <div className="flex flex-col min-h-screen">
         <Header/>
         <Box className="flex-grow mt-24 p-12">
-            <Grid container spacing={3}>
+            <Grid container spacing={3} justifyContent='center'>
                 <Grid item xs={12} md={6}>
-                    <div className='w-full'>
-                        
-                    </div>    
+                <div className='w-full text-center mb-8'>
+                            <h1>Login</h1>
+                        </div>
                 </Grid>  
 
             </Grid>
