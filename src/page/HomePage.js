@@ -44,7 +44,7 @@ const HomePage = () => {
         <Grid item xs={6} md={7}>
             <div className="w-full">
                 <h1 className="text-xl sm:text-md md:text-xl lg:text-6xl xl:text-9xl 2xl:text-9lg font-normal italic mb-4">Welcome to</h1>
-                <h1 className={`font-mono text-amber-400 text-xl sm:text-md md:text-xl lg:text-9xl xl:text-9xl 2xl:text-9lg font-bold mb-4 
+                <h1 className={`font-mono text-amber-400 text-4xl sm:text-6xl md:text-7xl lg:text-9xl xl:text-9xl 2xl:text-9lg font-bold mb-4 
                     transition duration-60000 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>BlockHub</h1>
             </div>
         </Grid>
