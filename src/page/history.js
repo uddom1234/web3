@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+// Define the History component (Dummy Data)
 const History = () => {
   const [transactionHistory] = useState([
     { id: '1111111111111111111', method: 'mint', date: '09/02/2023' },
@@ -20,10 +21,12 @@ const History = () => {
     { id: '7777777777777777777', method: 'gift', date: '08/02/2022' } ]);
 
   const [currentPage, setCurrentPage] = useState(1);
+  // Define how many row in a page
   const [transactionsPerPage] = useState(6);
-
+  
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' for ascending, 'desc' for descending
 
+  // Function to sort transactions based on date
   const sortTransactions = (transactions, order) => {
     return [...transactions].sort((a, b) => {
       const dateA = new Date(a.date.split('/').reverse().join('-'));
@@ -32,24 +35,29 @@ const History = () => {
     });
   };
 
+  // Sort Transactions
   const sortedTransactions = sortTransactions(transactionHistory, sortOrder);
 
+  // Calculate indices of transactions to display on the current page
   const indexOfLastTransaction = currentPage * transactionsPerPage;
   const indexOfFirstTransaction = indexOfLastTransaction - transactionsPerPage;
   const currentTransactions = sortedTransactions.slice(indexOfFirstTransaction, indexOfLastTransaction);
 
+  // Function to go to next page
   const nextPage = () => {
     if (currentPage < Math.ceil(sortedTransactions.length / transactionsPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   }
 
+  // Function to go to previous page
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
   }
 
+  // Function to toggle the sort order between 'asc' and 'desc'
   const toggleSortOrder = () => {
     setSortOrder(prevSortOrder => prevSortOrder === 'asc' ? 'desc' : 'asc');
   };
