@@ -68,11 +68,10 @@ const History = () => {
       <main className="flex-grow mt-24 px-8 py-4">
         <div className="bg-gray-800 p-6 mb-8 text-white border-2 border-black shadow-xl rounded-lg">
           <h1 className="text-center">History Page</h1>
-
-
           <h1 className="text-center animate-bounce font-bold text-2xl">Welcome Uddom Pang!</h1>
         </div>
         <table className="min-w-full border-collapse border border-black shadow-xl">
+          {/* table header */}
           <thead>
             <tr>
               <th className="py-2 px-4 border border-black">Transaction ID</th>
@@ -80,6 +79,8 @@ const History = () => {
               <th  className="py-2 px-4 border border-black"><button onClick={toggleSortOrder}>Date {sortOrder === 'asc' ? '↓' : '↑'}</button></th>
             </tr>
           </thead>
+
+          {/* display the transactions */}
           <tbody>
             {currentTransactions.map((transaction, index) => (
             <tr key={index}>
@@ -90,6 +91,8 @@ const History = () => {
             ))}
           </tbody>
         </table>
+
+        {/* toggling through the lists of transactions */}
         <div className="flex justify-center mt-4">
           <button className="px-4 py-2 border rounded mr-2" onClick={prevPage}>Back</button>
           <button className="px-4 py-2 border rounded ml-2" onClick={nextPage}>Next</button>

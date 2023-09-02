@@ -17,8 +17,6 @@ export default function RouteApp () {
                     <Route path="/browse" element={<Browse/>} />
                     <Route path="/login" element={<Login/>} />
                     <Route path="/Signup" element={<Signup/>} />
-
-
                 </Routes>
             </Router>
         </>

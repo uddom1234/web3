@@ -9,6 +9,7 @@ import AssetItem from "../components/AssetItem";
 import ReusableSelect from "../components/Filter";
 import PriceRangeSlider from "../components/PriceRangeSlider";
 import Upload from "../components/Upload";
+import FormUpload from "../components/FormUpload";
 
 const Browse = () => {
   // Example categories and assets data
@@ -46,6 +47,8 @@ const Browse = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header/>
+
+      {/* grid and box for responsive design */}
       <Box className="flex-grow mt-24 p-12">
 
         <Grid container spacing={3}>
@@ -62,6 +65,7 @@ const Browse = () => {
                 />
               </div>
         </Grid>
+          {/* these are the filters */}
           <Grid item xs={5} lg={3}>
             <Paper elevation={3} className="p-4">
               <h2>Filtering Options</h2>
@@ -106,6 +110,8 @@ const Browse = () => {
                 
               </div>
             </Paper>
+
+            {/* this will open the modal for uploading asset */}
             <button
               className="my-10 border border-black w-full p-5 rounded-lg hover:shadow-lg transition 3s bg-blue-700 hover:bg-blue-400 text-white font-bold"
               onClick={openModal}
@@ -117,31 +123,7 @@ const Browse = () => {
               onClose={closeModal}
               title="Upload Asset"
             >
-<form onSubmit={(e) => { e.preventDefault(); }}>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Asset Name:</label>
-            <input className="mt-1 p-2 border rounded-md w-full" type="text" name="assetName" />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Price:</label>
-            <input className="mt-1 p-2 border rounded-md w-full" type="number" name="price" />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Category:</label>
-            <input className="mt-1 p-2 border rounded-md w-full" type="text" name="category" />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Upload Images:</label>
-            <input className="mt-1 p-2 border rounded-md w-full" type="file" name="images" multiple />
-          </div>
-
-          {/* Add more form fields for crypto-related information */}
-          
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" type="submit">Submit</button>
-        </form>
+                <FormUpload/>
             </Upload>          
         </Grid>
           
