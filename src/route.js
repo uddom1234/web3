@@ -5,6 +5,7 @@ import HomePage from "./page/HomePage";
 import History from "./page/History";
 import Browse from "./page/Browse";
 import Login from "./page/Login";
+import Signup from "./page/Signup";
 
 export default function RouteApp () {
     return (
@@ -15,6 +16,7 @@ export default function RouteApp () {
                     <Route path="/history" element={<History/>} />
                     <Route path="/browse" element={<Browse/>} />
                     <Route path="/login" element={<Login/>} />
+                    <Route path="/Signup" element={<Signup/>} />
 
 
                 </Routes>

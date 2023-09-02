@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-const Login = () => {
+const Signup = () => {
     const [isMounted, setIsMounted] = React.useState(false);
 
     React.useEffect(() => {
@@ -28,10 +28,17 @@ return (
             <Grid container spacing={3} justifyContent='center'>
                 <Grid item xs={12} md={6}>
                 <div className='w-full text-center mb-8'>
-                <img src="../../login.png" alt="image" className="w-1/2 mx-auto mb-10"/>
-                    <h1 className="text-4xl font-bold uppercase text-blue-600">Login</h1>
+                <img src="../../signup.png" alt="image" className="w-1/3 mx-auto mb-10"/>
+                    <h1 className="text-4xl font-bold uppercase text-blue-600">Sign Up With Email</h1>
                 </div>
                     <form className="w-full max-w-sm mx-auto">
+                    <div className="mb-4">
+                                <TextField 
+                                    fullWidth 
+                                    label="Email" 
+                                    variant="outlined" 
+                                />
+                            </div>
                         <div className="mb-4">
                                 <TextField 
                                     fullWidth 
@@ -48,21 +55,21 @@ return (
                                 />
                             </div>
                             <div className="mb-4">
-                                <Link to='/'>
+                                <Link to="/">
                                 <Button     
                                     fullWidth 
                                     variant="contained" 
                                     color="primary" 
                                     type="submit"
                                 >
-                                Log In
+                                Connect with BlockHub
                                 </Button>
                                 </Link>
                             </div>
                             <div className="text-center">
-                                <Link to="/signup">
+                                <Link to="/login">
                                     <Button color="secondary">
-                                        Sign Up
+                                        Already have an account?
                                     </Button>
                                 </Link>
                             </div>
@@ -78,4 +85,4 @@ return (
     </div>
 )}
 
-export default Login;
+export default Signup;
