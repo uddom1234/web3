@@ -109,7 +109,7 @@ const HomePage = () => {
         <Grid item xs={4} md={4}>
             <div className="group w-full relative hover:bg-blue-100 p-2 rounded-2xl">
             <a href="/history" className="group">
-                    <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105 whitespace-nowrap">
+                    <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
                      View History
                     </button>
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center">
