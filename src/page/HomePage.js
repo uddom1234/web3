@@ -28,7 +28,7 @@ const HomePage = () => {
     React.useEffect(() => {
       setTimeout(() => {
         setIsMounted(true);
-      }, 700); // Initial delay
+      }, 700); // Initial delay 700ms
     }, []);
 
     return (
@@ -38,27 +38,27 @@ const HomePage = () => {
           <Grid container spacing={5}>
               <Grid item xs={6} md={7}>
                   <div className="w-full">
-                      <h1 className="text-xl sm:text-md md:text-xl lg:text-6xl xl:text-9xl 2xl:text-9lg font-normal italic mb-4">Welcome to</h1>
+                      <h1 className="text-xl sm:text-md md:text-xl lg:text-6xl xl:text-9xl 2xl:text-9lg font-normal italic mb-4">Welcome to</h1> {/* Welcome text */}
                       <h1 className={`font-mono text-amber-400 text-4xl sm:text-6xl md:text-7xl lg:text-9xl xl:text-9xl 2xl:text-9lg font-bold mb-4 
-                          transition duration-60000 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>BlockHub</h1>
+                          transition duration-60000 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>BlockHub</h1> {/* Fade in when the HomePage loaded */}
                   </div>
               </Grid>
               <Grid item xs={6} md={5}>
               <Grid container spacing={8}>
               <Grid item xs={4} md={4}>
-                  <div className="group w-full h-full relative hover:bg-blue-100 p-2 rounded-2xl">
+                  <div className="group w-full h-full relative hover:bg-blue-100 p-2 rounded-2xl"> {/* Drop down as a block that show description and picture*/}
                   <a href="/browse" className="group">
                           <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
                               Start Trading
                           </button>
-                          <div className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center"><p>Start your trading journey here.</p>
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity mt-2 text-center"><p>Start your trading journey here.</p> {/* Drop down as a block that show description and picture*/}
                           <img src="../../trading.png" alt="image" className="w-full h-auto"/>
                           </div>
                       </a>
                   </div>
               </Grid>
               <Grid item xs={4} md={4}>
-              <div className="group w-full h-full relative hover:bg-blue-100 p-2 rounded-2xl">
+              <div className="group w-full h-full relative hover:bg-blue-100 p-2 rounded-2xl"> {/* Drop down as a block that show description and picture*/}
                 <button onClick={openModal} className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
                     Upload Assets
                 </button>
@@ -80,7 +80,7 @@ const HomePage = () => {
           
               </Grid>
               <Grid item xs={4} md={4}>
-                  <div className="group w-full relative hover:bg-blue-100 p-2 rounded-2xl">
+                  <div className="group w-full relative hover:bg-blue-100 p-2 rounded-2xl"> {/* Drop down as a block that show description and picture*/}
                   <a href="/history" className="group">
                           <button className="px-4 py-2 text-md font-bold bg-blue-700 hover:bg-blue-950 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform group-hover:scale-105">
                           View History
@@ -103,10 +103,10 @@ const HomePage = () => {
               <div className="w-full">
               <a href="/signup" className="flex items-center justify-center px-8 py-4 text-lg font-bold bg-blue-500 hover:bg-amber-400 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform hover:scale-105">
                   Sign Up
-              </a>
+              </a>{/* change color to yellow when hovered*/}
               <a href="/login" className="flex items-center justify-center px-8 py-4 text-lg font-bold bg-blue-500 hover:bg-amber-400 text-white rounded-full w-full mt-4 transition duration-300 ease-in-out transform hover:scale-105">
                   Log In
-              </a>
+              </a>{/* change color to yellow when hovered*/}
                   <div className="w-full pt-20">
                       <img src="../../homepage_2.jpg" alt="image" className="w-full h-auto"/>
                   </div>
