@@ -24,7 +24,7 @@ const HomePage = () => {
     const closeModal = () => {
       setIsModalOpen(false);
     };
-
+    //animation for text
     React.useEffect(() => {
       setTimeout(() => {
         setIsMounted(true);
