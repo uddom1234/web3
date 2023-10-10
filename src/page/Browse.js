@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { styled } from '@mui/material/styles';
@@ -10,6 +10,7 @@ import ReusableSelect from "../components/Filter";
 import PriceRangeSlider from "../components/PriceRangeSlider";
 import Upload from "../components/Upload";
 import FormUpload from "../components/FormUpload";
+import { useSelector } from "react-redux";
 
 const Browse = () => {
   // Example categories and assets data
@@ -29,6 +30,8 @@ const Browse = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const status = useSelector((state) => state.auth.active)
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -43,6 +46,10 @@ const Browse = () => {
     (selectedPrice === "" || asset.price <= selectedPrice) &&
     (searchTerm === "" || asset.name.toLowerCase().includes(searchTerm.toLowerCase()))
   );
+
+  useEffect(() => {
+    console.log(status)
+  }, [status])
 
   return (
     <div className="flex flex-col min-h-screen">
