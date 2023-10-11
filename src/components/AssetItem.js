@@ -43,6 +43,17 @@ const AssetItem = ({ asset }) => {
               </div>
             </div>
           </div>
+          <div>
+            <button
+              className="bg-amber-400 hover:bg-amber-500 text-white px-4 py-2 rounded transition duration-300"
+              onClick={() => {
+      // Handle the buy action here
+              console.log(`Buy ${asset[1]}`);
+              }}
+            >
+              Buy
+            </button>
+</div>
         </div>
       </li>
     </>
