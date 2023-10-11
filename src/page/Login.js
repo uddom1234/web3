@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import Header from "../components/Header";
@@ -27,12 +27,12 @@ const Login = () => {
     };
 
     //animation for text
-
     React.useEffect(() => {
       setTimeout(() => {
         setIsMounted(true);
       }, 700); // Initial delay
     }, []);
+
 
     const status = useSelector((state) => state.auth.active)
 
