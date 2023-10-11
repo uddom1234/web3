@@ -7,7 +7,8 @@ const PriceRangeSlider = ({ value, onChange }) => {
       <input
         type="range"
         min="0"
-        max="500" // Adjust the maximum value as needed
+        max="1000000" // Adjust the maximum value as needed
+        step="10000"
         value={value}
         onChange={(e) => onChange(parseInt(e.target.value))}
         class="w-full slider"

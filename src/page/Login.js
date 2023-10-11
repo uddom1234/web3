@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import Header from "../components/Header";
@@ -6,17 +6,20 @@ import Box from '@mui/material/Box';
 import Footer from "../components/Footer";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import axios from 'axios';
 
 const Login = () => {
     const [isMounted, setIsMounted] = React.useState(false);
-
+    const [data, setData] = useState([]);
+    const [counter, setCounter] = useState(0)
+    
     //animation for text
-
     React.useEffect(() => {
       setTimeout(() => {
         setIsMounted(true);
       }, 700); // Initial delay
     }, []);
+
 
     return (
         <div className="flex flex-col min-h-screen">
