@@ -33,6 +33,20 @@ const Browse = () => {
 
   const status = useSelector((state) => state.auth.active)
 
+  //Upload Form
+  const handleAssetUpload = (formData) => {
+    console.log(formData)
+    // Make a POST request to add the asset to the database
+    axios.post('http://localhost:8000/add_asset/', formData)
+      .then((response) => {
+        // Asset uploaded successfully, trigger a page refresh
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error("Error uploading asset: ", error);
+      });
+  };
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -131,7 +145,7 @@ const Browse = () => {
               onClose={closeModal}
               title="Upload Asset"
             >
-                <FormUpload/>
+              <FormUpload onUpload={handleAssetUpload}/>
             </Upload>
           </Grid>
   
